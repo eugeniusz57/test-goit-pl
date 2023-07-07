@@ -1,0 +1,15 @@
+.background-grad {
+  // max-width: 576px;
+  max-width: 1920px;
+  height: 1000px;
+  background-color: $heroBg-color;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 12px;
+  background-image: $gradient, url(../images/hero.jpg);
+  overflow: hidden;
+}

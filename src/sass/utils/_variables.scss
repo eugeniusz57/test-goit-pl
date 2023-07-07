@@ -1,0 +1,31 @@
+// Fonts
+$mainFont: 'Roboto', sans-serif;
+$secondaryFont: 'Montserrat', sans-serif;
+$titleFont: 'Kaushan Script', cursive;
+
+// Text colors
+$main-text-color: #999;
+$secondary-text-color: #333;
+$header-text-color: #ffffff;
+
+//Bg colors
+$mainBg-color: #fff;
+$accentBg-color: #95e1d3;
+$heroBg-color: #fce38a;
+
+$buttonBg-color: #ff6b01;
+$hover-focusBG-color: #f38181;
+
+//gradient
+$gradient: linear-gradient(
+  0deg,
+  rgba(252, 227, 138, 0.89) 0%,
+  rgba(243, 129, 129, 0.89) 100%
+);
+
+//efect
+$animationColor: color 250ms ease;
+$animationBackgroundColor: background-color 250ms ease;
+
+//border
+$btnHero: 3px solid #fff;

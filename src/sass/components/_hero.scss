@@ -1,0 +1,46 @@
+.hero {
+  padding-top: 164px;
+  padding-bottom: 230px;
+  text-align: center;
+  color: $header-text-color;
+}
+
+.hero__subtitle {
+  font-family: $titleFont;
+  font-size: 72px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 42px;
+}
+
+.hero__title {
+  font-family: $secondaryFont;
+  font-size: 150px;
+  line-height: 140px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 124px;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  min-height: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: $btnHero;
+  cursor: pointer;
+
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $header-text-color;
+  transition: $animationBackgroundColor;
+
+  &:hover,
+  &:focus {
+    background-color: $accentBg-color;
+  }
+}
