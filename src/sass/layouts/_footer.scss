@@ -1,0 +1,79 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: $footer;
+  padding: 10px 0;
+}
+
+.footer__copy {
+  font-family: $secondaryFont;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: $secondary-text-color;
+  & span {
+    color: $hover-focusBG-color;
+  }
+}
+
+.subscribe__form {
+  text-align: center;
+}
+.input-foter {
+  position: relative;
+  display: flex;
+}
+
+.subscribe__input {
+  display: block;
+  padding: 5px 16px;
+  width: 100%;
+  height: 40px;
+  padding: 13px;
+  border: $input-footer;
+  background-color: $mainBg-color;
+  margin-bottom: 20px;
+  color: $footer-input-color;
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+.subscribe__label {
+  position: absolute;
+  font-weight: 300;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  color: $main-text-color;
+  top: 15%;
+  left: 13px;
+  transition: transform 250ms linear;
+
+  .subscribe__input:focus + &,
+  .subscribe__input:not(:placeholder-shown) + & {
+    transform: translateX(-100px);
+  }
+}
+
+.subscribe__btn {
+  text-align: center;
+  min-width: 150px;
+  height: 40px;
+  background-color: $accentBg-color;
+  transition: $animationBackgroundColor;
+  font-family: $secondaryFont;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $header-text-color;
+  cursor: pointer;
+  border: none;
+  &:hover,
+  &:focus {
+    background-color: $buttonBg-color;
+  }
+}

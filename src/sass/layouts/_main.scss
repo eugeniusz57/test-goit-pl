@@ -22,3 +22,98 @@
   display: block;
   margin-right: 28px;
 }
+
+.our-team__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 92px;
+  margin-bottom: 36px;
+}
+
+.our-team__item {
+}
+
+.our-team__link {
+}
+
+.our-team__img {
+  display: block;
+  position: relative;
+  width: 380px;
+  height: 470px;
+  background-color: $accentBg-color;
+  object-fit: cover;
+  & img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.our-team__title {
+  margin-top: 31px;
+  font-family: $secondaryFont;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $secondary-text-color;
+}
+
+.our-team__profetion {
+  margin-top: 15px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.social {
+  position: absolute;
+  color: $hover-focusBG-color;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  background: $gradient;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 250ms ease;
+
+  .our-team__img:hover &,
+  .our-team__img:focus & {
+    transform: scale(1);
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
+
+.social__list {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 224px;
+  height: 56px;
+  background-color: #fce38a;
+}
+
+.social__item {
+}
+
+.social__link {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  &:hover,
+  &:focus {
+    color: $header-text-color;
+    fill: $header-text-color;
+    background-color: $hover-focusBG-color;
+  }
+}
