@@ -1,25 +1,50 @@
 .hero {
-  padding-top: 164px;
-  padding-bottom: 230px;
   text-align: center;
   color: $header-text-color;
+  padding-top: 60px;
+  padding-bottom: 80px;
+
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 140px;
+  }
+  @include desktop {
+    padding-top: 164px;
+    padding-bottom: 230px;
+  }
 }
 
 .hero__subtitle {
   font-family: $titleFont;
-  font-size: 72px;
+  font-size: 32px;
   line-height: 1.2;
   font-weight: 400;
-  margin-bottom: 42px;
+  margin-bottom: 18px;
+  @include tablet {
+    font-size: 52px;
+    margin-bottom: 32px;
+  }
+  @include desktop {
+    font-size: 72px;
+    margin-bottom: 42px;
+  }
 }
 
 .hero__title {
   font-family: $secondaryFont;
-  font-size: 150px;
-  line-height: 140px;
+  font-size: 40px;
+  line-height: 0.93;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 124px;
+  margin-bottom: 44px;
+  @include tablet {
+    font-size: 100px;
+    margin-bottom: 74px;
+  }
+  @include desktop {
+    font-size: 150px;
+    margin-bottom: 124px;
+  }
 }
 
 .hero__btn {

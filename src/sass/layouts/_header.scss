@@ -3,18 +3,19 @@ header {
 }
 
 .header__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
+  justify-items: end;
   @include tablet {
     width: 100%;
-    justify-content: space-between;
   }
 }
 
 .header__logo {
   color: #fff;
   font-family: $mainFont;
-  font-size: 30px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -24,10 +25,16 @@ header {
   &:focus {
     color: $heroBg-color;
   }
+
+  @include tablet {
+    font-size: 30px;
+  }
 }
 
 .heder__nav-contact {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-items: end;
 }
 
 .site-nav {
@@ -37,12 +44,16 @@ header {
   font-weight: 400;
   text-transform: uppercase;
   color: $header-text-color;
-  display: flex;
-  gap: 55px;
-  margin-right: 50px;
-}
 
-.site-nav__item {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  @include tablet {
+    column-gap: 28px;
+  }
+  @include desktop {
+    column-gap: 58px;
+  }
 }
 
 .site-nav__link {
@@ -62,7 +73,7 @@ header {
     &:after {
       content: ' ';
       position: absolute;
-      bottom: -1px;
+      bottom: 0px;
       left: 0;
       width: 100%;
       height: 3px;
@@ -80,22 +91,28 @@ header {
 }
 
 .sub-menu {
-  display: flex;
-  gap: 42px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
   color: $header-text-color;
+
+  @include tablet {
+    column-gap: 22px;
+  }
+  @include desktop {
+    column-gap: 42px;
+  }
+
   &__svg {
     fill: currentColor;
   }
 }
 
-.sub-menu__item {
-}
-
 .sub-menu__link {
   padding: 15px 2px;
+  transition: $animationColor;
   &:hover,
   &:focus {
     color: $heroBg-color;
-    fill: $heroBg-color;
   }
 }

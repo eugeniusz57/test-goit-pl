@@ -1,7 +1,6 @@
 .background-grad {
-  // max-width: 576px;
-  max-width: 1920px;
-  height: 1000px;
+  max-width: 576px;
+
   background-color: $heroBg-color;
   margin-left: auto;
   margin-right: auto;
@@ -12,4 +11,12 @@
   padding-top: 12px;
   background-image: $gradient, url(../images/hero.jpg);
   overflow: hidden;
+  @include tablet {
+    max-width: 992px;
+    height: 1000px;
+  }
+  @include desktop {
+    max-width: 1920px;
+    height: 1000px;
+  }
 }
