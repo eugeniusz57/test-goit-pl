@@ -81,8 +81,8 @@
     height: 470px;
   }
 
-  &:hover > img,
-  &:focus > img {
+  &:hover img,
+  &:focus img {
     transform: translate(-10px, -10px);
   }
 
@@ -123,12 +123,16 @@
   color: $hover-focusBG-color;
   top: -10px;
   left: -10px;
-  width: 380px;
-  height: 470px;
+  width: 291px;
+  height: 371px;
   background: $gradient;
   overflow: hidden;
   transform: scale(0);
   transition: transform 250ms ease;
+  @include tablet {
+    width: 381px;
+    height: 471px;
+  }
 
   .our-team__img:hover &,
   .our-team__img:focus & {
