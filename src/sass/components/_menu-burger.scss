@@ -1,0 +1,34 @@
+.menu-burger {
+  z-index: 101;
+  color: red;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  //   background-color: transparent;
+
+  transition: $animationColor;
+
+  &:hover,
+  &:focus {
+    color: $accentBg-color;
+  }
+  & .icon-menu,
+  & .icon-close-burger {
+    fill: currentColor;
+  }
+
+  & .icon-close-burger {
+    display: none;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+  &.is-open .icon-close-burger {
+    display: block;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}

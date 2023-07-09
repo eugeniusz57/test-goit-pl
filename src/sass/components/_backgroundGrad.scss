@@ -1,6 +1,6 @@
 .background-grad {
   max-width: 576px;
-
+  height: 380px;
   background-color: $heroBg-color;
   margin-left: auto;
   margin-right: auto;
@@ -13,7 +13,7 @@
   overflow: hidden;
   @include tablet {
     max-width: 992px;
-    height: 1000px;
+    height: 600px;
   }
   @include desktop {
     max-width: 1920px;

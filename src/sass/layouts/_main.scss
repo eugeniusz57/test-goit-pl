@@ -1,14 +1,31 @@
 .service__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 68px;
   margin-top: 20px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 48px;
+    row-gap: 80px;
+  }
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 68px;
+    row-gap: 100px;
+  }
 }
 
 .service__item {
   display: flex;
-  width: 336;
+  width: 290px;
   text-align: start;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  @include tablet {
+    width: 336px;
+    margin-bottom: 0px;
+  }
 }
 
 .service__title {
@@ -24,24 +41,45 @@
 }
 
 .our-team__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 92px;
-  margin-bottom: 36px;
+  margin-top: 42px;
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-top: 52px;
+    margin-bottom: 26px;
+  }
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    margin-top: 92px;
+    margin-bottom: 36px;
+  }
 }
 
 .our-team__item {
-}
-
-.our-team__link {
+  margin-left: auto;
+  margin-right: auto;
+  width: 290px;
+  margin-bottom: 30px;
+  @include tablet {
+    width: 380px;
+  }
+  @include desktop {
+    margin-bottom: 0px;
+  }
 }
 
 .our-team__img {
   position: relative;
-  width: 380px;
-  height: 470px;
+  width: 290px;
+  height: 370px;
   background-color: $accentBg-color;
+
+  @include tablet {
+    width: 380px;
+    height: 470px;
+  }
 
   &:hover > img,
   &:focus > img {
@@ -62,13 +100,16 @@
 }
 
 .our-team__title {
-  margin-top: 31px;
+  margin-top: 20px;
   font-family: $secondaryFont;
   font-size: 14px;
   line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
   color: $secondary-text-color;
+  @include tablet {
+    margin-top: 31px;
+  }
 }
 
 .our-team__profetion {
@@ -111,6 +152,8 @@
 }
 
 .social__item {
+  width: 56px;
+  height: 56px;
 }
 
 .social__link {
@@ -118,8 +161,8 @@
 
   justify-content: center;
   align-items: center;
-  width: 56px;
-  height: 56px;
+  width: 100%;
+  height: 100%;
   &:hover,
   &:focus {
     color: $header-text-color;

@@ -32,27 +32,59 @@ header {
 }
 
 .heder__nav-contact {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  justify-items: end;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    transform: translate(0px, -100%);
+    overflow: auto;
+    top: 0;
+    left: 0;
+
+    &.is-open {
+      position: fixed;
+
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+
+      transform: translate(0px, 0%);
+      background: $gradient;
+      visibility: visible;
+      padding: 48px 40px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: transform 250ms ease;
+    }
+  }
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: end;
+  }
 }
 
 .site-nav {
   font-family: $secondaryFont;
-  font-size: 14px;
+  font-size: 24px;
   line-height: 1.2;
   font-weight: 400;
   text-transform: uppercase;
   color: $header-text-color;
 
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-
   @include tablet {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     column-gap: 28px;
+    font-size: 14px;
   }
   @include desktop {
     column-gap: 58px;
+  }
+}
+
+.site-nav__item {
+  margin-bottom: 16px;
+  @include tablet {
+    margin-bottom: 0;
   }
 }
 
@@ -93,7 +125,6 @@ header {
 .sub-menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   color: $header-text-color;
 
   @include tablet {
