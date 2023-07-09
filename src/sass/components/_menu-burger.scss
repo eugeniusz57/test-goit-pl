@@ -12,8 +12,8 @@
   &:focus {
     color: $accentBg-color;
   }
-  & .icon-menu,
-  & .icon-close-burger {
+  .icon-menu,
+  .icon-close-burger {
     fill: currentColor;
   }
 
@@ -28,7 +28,11 @@
     display: block;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: none;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
